@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  color: white;
+  --bg-color: #24252f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #24252f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  position: absolute;
+  width: 90%;
+  padding: 30px 90px;
+  z-index: 99;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  display: inline;
+  margin: 0 1.8rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.nav-btn {
+  background-color: white;
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #24252f;
+}
+
+.loading-text {
+  font-size: 1.4rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.loading-box-wrapper {
+  position: absolute;
+  width: 500px;
+  height: 130px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.loading-box {
+  position: absolute;
+  width: 500px;
+  height: 130px;
+  background-color: white;
+  z-index: 1;
+}
+
+.hero-text {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hero-text h2{
+  font-size: 5rem;
+}
+
+.hero-text p{
+  font-size: 1rem;
+}
+
+.bg-img {
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.left-content {
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  background-color: #24252f;
+  left: 0;
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-color);
+  z-index: 99;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.2rem;
+}
+
+.social {
+  position: absolute;
+  height: 100px;
+  right: 90px;
+  transform-origin: bottom;
+  top: calc(50% - 50px);
+}
+
+.social ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cookies {
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  padding: 0px 20px;
+  background-color: white;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  
+}
+
+.cookies p,span {
+  color: #24252f;
+  font-size: 0.8rem;
+}
+
+.cookies span {
+  text-decoration: underline;
+}
+
+.accept-btn {
+  background-color: var(--bg-color);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 0.8rem;
+  padding: 14px 20px;
 }
